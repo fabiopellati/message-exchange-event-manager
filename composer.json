@@ -1,5 +1,5 @@
 {
-  "name": "fabiopellati/message",
+  "name": "fabiopellati/message-exchange-event-manager",
   "description": "gestione eventi estesa con request e response",
   "license": "proprietary",
   "authors": [
