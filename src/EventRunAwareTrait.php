@@ -69,7 +69,7 @@ trait EventRunAwareTrait
             }
 
         } catch (\Exception $e) {
-            throw new \RuntimeException($e->getMessage(), $e->getStatusCode(), $e->getPrevious()->getFile(),
+            throw new \RuntimeException($e->getMessage(), $e->getCode(), $e->getPrevious()->getFile(),
                                         $e->getPrevious()->getLine());
 
         }
