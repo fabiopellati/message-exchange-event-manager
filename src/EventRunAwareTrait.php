@@ -56,6 +56,13 @@ trait EventRunAwareTrait
             $steps = [$eventRunPre, $eventRun, $eventRunPost];
             foreach ($steps as $step) {
                 $response = $this->triggerEvent($step, $event);
+                if (!isset($response) || !$response instanceof Response) {
+                    throw new \RuntimeException('last response unattended, is attended \MessageExchangeEventManager\Response\Response',
+                                                500);
+                }
+                if ($response->getContent() instanceof \Exception) {
+                    throw  $response->getContent();
+                }
                 if ($event->propagationIsStopped()) {
                     $event->stopPropagation(false);
                 }
@@ -64,16 +71,13 @@ trait EventRunAwareTrait
                 throw new \RuntimeException('last response unattended, is attended \MessageExchangeEventManager\Response\Response',
                                             500);
             }
-            if ($response->getContent() instanceof \Exception) {
-                throw  $response->getContent();
-            }
+
+            return $response;
 
         } catch (\Exception $e) {
-            throw new \RuntimeException($e->getMessage(),  $e->getCode(), $e->getPrevious());
+            throw new \RuntimeException($e->getMessage(), $e->getCode(), $e->getPrevious());
 
         }
-
-        return $response;
 
     }
 }
