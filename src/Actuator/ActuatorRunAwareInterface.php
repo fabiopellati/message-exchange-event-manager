@@ -6,13 +6,13 @@
  * @license   http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
  *
  */
-namespace MessageExchangeEventManager\Actuator;
 
+namespace MessageExchangeEventManager\Actuator;
 interface ActuatorRunAwareInterface
 {
-    const EVENT_ACTUATOR_PRE_RUN='actuator.run.pre';
-    const EVENT_ACTUATOR_RUN='actuator.run';
-    const EVENT_ACTUATOR_POST_RUN='actuator.run.post';
+    const EVENT_ACTUATOR_RUN_PRE = 'EVENT_ACTUATOR_RUN_PRE';
+    const EVENT_ACTUATOR_RUN = 'EVENT_ACTUATOR_RUN';
+    const EVENT_ACTUATOR_RUN_POST = 'EVENT_ACTUATOR_RUN_POST';
 
     public function run($options);
 

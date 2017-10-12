@@ -26,8 +26,8 @@ implements ActuatorRunAwareInterface
     public function run($options)
     {
         $this->getEvent()->getRequest()->getParameters()->set('actuatorRunOptions',$options);
-        $response = $this->runEvent($this->getEvent(), self::EVENT_ACTUATOR_PRE_RUN,
-            self::EVENT_ACTUATOR_RUN, self::EVENT_ACTUATOR_POST_RUN);
+        $response = $this->runEvent($this->getEvent(), self::EVENT_ACTUATOR_RUN_PRE,
+            self::EVENT_ACTUATOR_RUN, self::EVENT_ACTUATOR_RUN_POST);
 
         return $response->getContent();
     }
