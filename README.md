@@ -1,6 +1,7 @@
-# MessageExchangeEventManager
+Message Exchange Event Manager
+==============================
 
-## Introduzione
 
-estensione di \Zend\EventManager\Event con implementazione di una comunicazione basata su un message excange pattern di tipo  
-Request-Response
+Message exchange pattern implementation for zend event manager https://github.com/zendframework/zend-eventmanager
+
+
