@@ -15,24 +15,24 @@ use MessageExchangeEventManager\Response\Response;
 trait EventAwareTrait
 {
     /**
-     * @var Event
+     * @var MessageExchangeEvent
      */
     protected $event;
 
 
     /**
-     * @return \MessageExchangeEventManager\Event\Event
+     * @return \MessageExchangeEventManager\Event\MessageExchangeEvent
      */
     public function getEvent()
     {
         if(is_null($this->event)){
-            $this->setEvent(new Event());
+            $this->setEvent(new MessageExchangeEvent());
         }
         return $this->event;
     }
 
     /**
-     * @param \MessageExchangeEventManager\Event\Event $event
+     * @param \MessageExchangeEventManager\Event\MessageExchangeEvent $event
      */
     public function setEvent($event)
     {

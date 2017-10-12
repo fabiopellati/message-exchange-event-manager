@@ -10,11 +10,11 @@
 return [
     'service_manager' => [
         'factories' => [
-            'MessageExchangeEventManager\\Event\\Event' => \Zend\ServiceManager\Factory\InvokableFactory::class,
-            'MessageExchangeEventManager\\Resultset\\Resultset' => \Zend\ServiceManager\Factory\InvokableFactory::class,
+            'MessageExchangeEventManager\\Event\\MessageExchangeEvent'  => \Zend\ServiceManager\Factory\InvokableFactory::class,
+            'MessageExchangeEventManager\\Resultset\\Resultset'         => \Zend\ServiceManager\Factory\InvokableFactory::class,
             'MessageExchangeEventManager\\Resultset\\ResultsetHydrator' => \Zend\ServiceManager\Factory\InvokableFactory::class,
-            'MessageExchangeEventManager\\Request\\Request' => \Zend\ServiceManager\Factory\InvokableFactory::class,
-            'MessageExchangeEventManager\\Response\\Response' => \Zend\ServiceManager\Factory\InvokableFactory::class,
+            'MessageExchangeEventManager\\Request\\Request'             => \Zend\ServiceManager\Factory\InvokableFactory::class,
+            'MessageExchangeEventManager\\Response\\Response'           => \Zend\ServiceManager\Factory\InvokableFactory::class,
         ]
     ],
 
