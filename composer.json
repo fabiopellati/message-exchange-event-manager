@@ -1,7 +1,7 @@
 {
   "name": "fabiopellati/message-exchange-event-manager",
-  "description": "gestione eventi estesa con request e response",
-  "license": "proprietary",
+  "description": "Message exchange pattern implementation for zend event manager",
+  "license": "BSD-3-Clause",
   "authors": [
     {
       "name": "Fabio Pellati",
