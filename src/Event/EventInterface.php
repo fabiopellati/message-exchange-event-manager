@@ -12,8 +12,7 @@ use MessageExchangeEventManager\Request\RequestInterface;
 use MessageExchangeEventManager\Response\ResponseInterface;
 
 /**
- * Interface MessageExchangeEventInterface
- * @deprecated use MessageExchangeEventInterface instead
+ * Interface EventInterface
  *
  * @package MessageExchangeEventManager\Event
  */

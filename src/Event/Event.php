@@ -20,7 +20,7 @@ use MessageExchangeEventManager\Response\ResponseInterface;
  * @package MessageExchangeEventManager\Event
  */
 class Event extends \Zend\EventManager\Event
-    implements MessageExchangeEventInterface
+    implements EventInterface
 {
 
     /**

@@ -9,7 +9,7 @@
 namespace MessageExchangeEventManager;
 
 use MessageExchangeEventManager\Event\MessageExchangeEvent;
-use MessageExchangeEventManager\Event\MessageExchangeEventInterface;
+use MessageExchangeEventManager\Event\EventInterface;
 use MessageExchangeEventManager\Response\Response;
 
 trait EventRunAwareTrait
@@ -18,12 +18,12 @@ trait EventRunAwareTrait
     /**
      * @param                                                   $eventName
      *
-     * @param \MessageExchangeEventManager\Event\MessageExchangeEventInterface $event
+     * @param \MessageExchangeEventManager\Event\EventInterface $event
      *
      * @return Response
      * @throws \RuntimeException
      */
-    protected function triggerEvent($eventName, MessageExchangeEventInterface $event)
+    protected function triggerEvent($eventName, EventInterface $event)
     {
         $event->setName($eventName);
         $event->setTarget($this);
