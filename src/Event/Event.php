@@ -13,12 +13,6 @@ use MessageExchangeEventManager\Request\RequestInterface;
 use MessageExchangeEventManager\Response\Response;
 use MessageExchangeEventManager\Response\ResponseInterface;
 
-/**
- * Class Event
- *
- * @deprecated use MessageExchangeEvent instead
- * @package MessageExchangeEventManager\Event
- */
 class Event extends \Zend\EventManager\Event
     implements EventInterface
 {

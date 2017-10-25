@@ -8,7 +8,7 @@
  */
 namespace MessageExchangeEventManager;
 
-use MessageExchangeEventManager\Event\MessageExchangeEvent;
+use MessageExchangeEventManager\Event\Event;
 use MessageExchangeEventManager\Event\EventInterface;
 use MessageExchangeEventManager\Response\Response;
 
@@ -43,14 +43,14 @@ trait EventRunAwareTrait
      *
      *
      *
-     * @param \MessageExchangeEventManager\Event\MessageExchangeEvent $event
+     * @param \MessageExchangeEventManager\Event\Event $event
      * @param  string                                                 $eventRunPre
      * @param  string                                                 $eventRun
      * @param  string                                                 $eventRunPost
      *
      * @return \MessageExchangeEventManager\Response\Response
      */
-    protected function runEvent(MessageExchangeEvent $event, $eventRunPre, $eventRun, $eventRunPost)
+    protected function runEvent(Event $event, $eventRunPre, $eventRun, $eventRunPost)
     {
         try {
             $steps = [$eventRunPre, $eventRun, $eventRunPost];

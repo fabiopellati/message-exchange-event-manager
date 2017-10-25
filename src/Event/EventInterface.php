@@ -11,11 +11,6 @@ namespace MessageExchangeEventManager\Event;
 use MessageExchangeEventManager\Request\RequestInterface;
 use MessageExchangeEventManager\Response\ResponseInterface;
 
-/**
- * Interface EventInterface
- *
- * @package MessageExchangeEventManager\Event
- */
 interface EventInterface extends \Zend\EventManager\EventInterface
 {
 
