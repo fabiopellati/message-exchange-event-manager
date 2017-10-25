@@ -10,9 +10,12 @@
 namespace MessageExchangeEventManager\Actuator;
 interface ActuatorRunAwareInterface
 {
+    const EVENT_ACTUATOR_INIT = 'EVENT_ACTUATOR_INIT';
+
     const EVENT_ACTUATOR_RUN_PRE = 'EVENT_ACTUATOR_RUN_PRE';
     const EVENT_ACTUATOR_RUN = 'EVENT_ACTUATOR_RUN';
     const EVENT_ACTUATOR_RUN_POST = 'EVENT_ACTUATOR_RUN_POST';
+
 
     public function run($options);
 

@@ -44,16 +44,13 @@ trait EventRunAwareTrait
      *
      *
      * @param \MessageExchangeEventManager\Event\Event $event
-     * @param  string                                                 $eventRunPre
-     * @param  string                                                 $eventRun
-     * @param  string                                                 $eventRunPost
+     * @param  array                                                 $steps
      *
      * @return \MessageExchangeEventManager\Response\Response
      */
-    protected function runEvent(Event $event, $eventRunPre, $eventRun, $eventRunPost)
+    protected function runEvent(Event $event,$steps)
     {
         try {
-            $steps = [$eventRunPre, $eventRun, $eventRunPost];
             foreach ($steps as $step) {
                 $response = $this->triggerEvent($step, $event);
                 if (!isset($response) || !$response instanceof Response) {
