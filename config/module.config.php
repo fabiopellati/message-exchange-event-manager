@@ -7,15 +7,17 @@
  *
  */
 
+use Laminas\ServiceManager\Factory\InvokableFactory;
+
 return [
     'service_manager' => [
         'factories' => [
-            'MessageExchangeEventManager\\Event\\Event'  => \Zend\ServiceManager\Factory\InvokableFactory::class,
-            'MessageExchangeEventManager\\Resultset\\Resultset'         => \Zend\ServiceManager\Factory\InvokableFactory::class,
-            'MessageExchangeEventManager\\Resultset\\ResultsetHydrator' => \Zend\ServiceManager\Factory\InvokableFactory::class,
-            'MessageExchangeEventManager\\Request\\Request'             => \Zend\ServiceManager\Factory\InvokableFactory::class,
-            'MessageExchangeEventManager\\Response\\Response'           => \Zend\ServiceManager\Factory\InvokableFactory::class,
-        ]
+            'MessageExchangeEventManager\\Event\\Event'                 => InvokableFactory::class,
+            'MessageExchangeEventManager\\Resultset\\Resultset'         => InvokableFactory::class,
+            'MessageExchangeEventManager\\Resultset\\ResultsetHydrator' => InvokableFactory::class,
+            'MessageExchangeEventManager\\Request\\Request'             => InvokableFactory::class,
+            'MessageExchangeEventManager\\Response\\Response'           => InvokableFactory::class,
+        ],
     ],
 
 ];

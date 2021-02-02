@@ -11,7 +11,8 @@ namespace MessageExchangeEventManager\Event;
 use MessageExchangeEventManager\Request\RequestInterface;
 use MessageExchangeEventManager\Response\ResponseInterface;
 
-interface EventInterface extends \Zend\EventManager\EventInterface
+interface EventInterface
+    extends \Laminas\EventManager\EventInterface
 {
 
     /**

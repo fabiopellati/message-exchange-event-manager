@@ -8,8 +8,8 @@
  */
 namespace MessageExchangeEventManager;
 
-use Zend\EventManager\EventManager;
-use Zend\EventManager\EventManagerInterface;
+use Laminas\EventManager\EventManager;
+use Laminas\EventManager\EventManagerInterface;
 
 trait SingletonEventManagerAwareTrait
 {

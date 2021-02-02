@@ -8,20 +8,19 @@
  */
 namespace MessageExchangeEventManager\Request;
 
-use Zend\Hydrator\HydratorInterface;
-use Zend\Stdlib\Parameters;
+use Laminas\Hydrator\HydratorInterface;
+use Laminas\Stdlib\Parameters;
 
 interface RequestInterface
 {
 
-
     /**
-     * @return \Zend\Stdlib\Parameters
+     * @return \Laminas\Stdlib\Parameters
      */
     public function getParameters();
 
     /**
-     * @param \Zend\Stdlib\Parameters $parameters
+     * @param \Laminas\Stdlib\Parameters $parameters
      *
      * @return mixed
      */

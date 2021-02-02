@@ -11,13 +11,14 @@ namespace MessageExchangeEventManager\Response;
 
 use MessageExchangeEventManager\Exception\RuntimeException;
 
-class Response extends \Zend\Stdlib\Response implements ResponseInterface
+class Response
+    extends \Laminas\Stdlib\Response
+    implements ResponseInterface
 {
     /**
      * @var int
      */
     protected $statusCode;
-
 
     /**
      * @var mixed

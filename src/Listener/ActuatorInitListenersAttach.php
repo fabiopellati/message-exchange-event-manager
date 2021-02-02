@@ -9,13 +9,14 @@
 
 namespace MessageExchangeEventManager\Listener;
 
+use Exception;
+use Laminas\EventManager\AbstractListenerAggregate;
+use Laminas\EventManager\EventManagerInterface;
+use Laminas\Stdlib\ArrayUtils;
 use MessageExchangeEventManager\Actuator\Actuator;
 use MessageExchangeEventManager\Event\Event;
 use MessageExchangeEventManager\EventManagerAwareTrait;
 use Psr\Container\ContainerInterface;
-use Zend\EventManager\AbstractListenerAggregate;
-use Zend\EventManager\EventManagerInterface;
-use Zend\Stdlib\ArrayUtils;
 
 final class ActuatorInitListenersAttach
     extends AbstractListenerAggregate
@@ -42,7 +43,6 @@ final class ActuatorInitListenersAttach
      */
     public function attach(EventManagerInterface $events, $priority = 1000)
     {
-
         $this->listeners[] = $events->attach(
             Actuator::EVENT_ACTUATOR_INIT, [$this, 'onEvent'], $priority);
         $this->setEventManager($events);
@@ -58,7 +58,6 @@ final class ActuatorInitListenersAttach
      */
     public function onEvent(Event $e)
     {
-
         $request = $e->getRequest();
         $response = $e->getResponse();
         try {
@@ -72,10 +71,8 @@ final class ActuatorInitListenersAttach
                     $listener->setEventManager($this->getEventManager());
                 }
                 $listener->attach($this->getEventManager());
-
             }
-
-        } catch (\Exception $error) {
+        } catch (Exception $error) {
             $response->setContent($error);
             $e->stopPropagation();
         }

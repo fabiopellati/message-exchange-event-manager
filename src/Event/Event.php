@@ -13,7 +13,8 @@ use MessageExchangeEventManager\Request\RequestInterface;
 use MessageExchangeEventManager\Response\Response;
 use MessageExchangeEventManager\Response\ResponseInterface;
 
-class Event extends \Zend\EventManager\Event
+class Event
+    extends \Laminas\EventManager\Event
     implements EventInterface
 {
 

@@ -8,10 +8,12 @@
  */
 namespace MessageExchangeEventManager\Request;
 
+use Laminas\Stdlib\Parameters;
 use MessageExchangeEventManager\Exception\RuntimeException;
-use Zend\Stdlib\Parameters;
 
-class Request extends \Zend\Stdlib\Request implements RequestInterface
+class Request
+    extends \Laminas\Stdlib\Request
+    implements RequestInterface
 {
 
     /**
@@ -19,20 +21,20 @@ class Request extends \Zend\Stdlib\Request implements RequestInterface
      */
     protected $parameters;
 
-
     /**
-     * @return \Zend\Stdlib\Parameters
+     * @return \Laminas\Stdlib\Parameters
      */
     public function getParameters()
     {
         if (!$this->parameters) {
             $this->setParameters(new Parameters());
         }
+
         return $this->parameters;
     }
 
     /**
-     * @param \Zend\Stdlib\Parameters $parameters
+     * @param \Laminas\Stdlib\Parameters $parameters
      *
      * @return mixed|void
      */

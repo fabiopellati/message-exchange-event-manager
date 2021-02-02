@@ -8,7 +8,7 @@
  */
 namespace MessageExchangeEventManager\Resultset;
 
-use Zend\Hydrator\HydratorInterface;
+use Laminas\Hydrator\HydratorInterface;
 
 class ResultsetHydrator implements HydratorInterface
 {
